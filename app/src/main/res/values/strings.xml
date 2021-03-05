@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Stroop Test</string>
+    <string name="desc_start">Start the game</string>
+</resources>
