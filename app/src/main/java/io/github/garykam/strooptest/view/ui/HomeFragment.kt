@@ -1,4 +1,4 @@
-package io.github.garykam.strooptest.ui
+package io.github.garykam.strooptest.view.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater

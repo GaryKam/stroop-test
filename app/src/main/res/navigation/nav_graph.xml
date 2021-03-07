@@ -6,7 +6,7 @@
     app:startDestination="@id/fragment_home">
     <fragment
         android:id="@+id/fragment_home"
-        android:name="io.github.garykam.strooptest.ui.HomeFragment"
+        android:name="io.github.garykam.strooptest.view.ui.HomeFragment"
         android:label="HomeFragment" >
         <action
             android:id="@+id/action_home_to_game"
@@ -15,6 +15,6 @@
     </fragment>
     <fragment
         android:id="@+id/fragment_game"
-        android:name="io.github.garykam.strooptest.ui.GameFragment"
+        android:name="io.github.garykam.strooptest.view.ui.GameFragment"
         android:label="GameFragment" />
 </navigation>
