@@ -39,9 +39,11 @@ class GameFragment : Fragment(), WordsAdapter.WordListener {
             countdownBar.setProgress(it, true)
 
             if (it <= 0) {
-                findNavController().navigate(
-                    R.id.action_game_to_result, bundleOf("score" to viewModel.calculateScore())
+                val bundle = bundleOf(
+                    "correct" to viewModel.getCorrect(),
+                    "incorrect" to viewModel.getIncorrect()
                 )
+                findNavController().navigate(R.id.action_game_to_result, bundle)
             }
         })
 

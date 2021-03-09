@@ -16,7 +16,11 @@ class ResultFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val scoreText: TextView = view.findViewById(R.id.text_score)
-        scoreText.text = arguments?.getInt("score").toString()
+        val correct = arguments?.getInt("correct") ?: 0
+        val incorrect = arguments?.getInt("incorrect") ?: 0
+
+        view.findViewById<TextView>(R.id.text_score).text = (correct - incorrect).toString()
+        view.findViewById<TextView>(R.id.text_correct).text = correct.toString()
+        view.findViewById<TextView>(R.id.text_incorrect).text = incorrect.toString()
     }
 }

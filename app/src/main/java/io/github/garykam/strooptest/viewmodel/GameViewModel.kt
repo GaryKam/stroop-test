@@ -32,7 +32,11 @@ class GameViewModel : ViewModel() {
         _timeRemaining.value = 60
     }
 
-    fun calculateScore(): Int {
+    fun getCorrect(): Int {
         return words.filter(Word::selected).filter(Word::matchesColor).size
+    }
+
+    fun getIncorrect(): Int {
+        return words.filter(Word::selected).filterNot(Word::matchesColor).size
     }
 }
